@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
@@ -6,12 +6,13 @@ import Transactions from './pages/Transactions'
 import Send from './pages/Send'
 import TopUp from './pages/TopUp'
 import Settings from './pages/Settings'
+import Landing from './pages/Landing'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route
