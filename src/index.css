@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #12172b;
+  --parchment: #faf6ef;
+  --mint: #2fae79;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}
+
+@theme {
+  --color-ink: #12172b;
+  --color-ink-soft: #1d2340;
+  --color-parchment: #faf6ef;
+  --color-parchment-dim: #f7f3ea;
+  --color-mint: #2fae79;
+  --color-mint-soft: #d7ece1;
+  --color-line: #e5e4e7;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --radius-xl2: 1.25rem;
+  --shadow-card: 0 10px 30px rgba(18, 23, 43, 0.06);
+  --shadow-card-lg: 0 10px 30px rgba(18, 23, 43, 0.06);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-parchment text-ink font-body;
+  margin: 0;
+}
+
+h1 { font-family: var(--font-display); }
+h2 { font-family: var(--font-display); }
+
+/* Utility helpers kept for compatibility while converting components */
+.muted { @apply text-gray-600 }
+.small { @apply text-sm }
+
